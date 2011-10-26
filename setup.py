@@ -1,3 +1,5 @@
+""" Installer
+"""
 import os
 from os.path import join
 from setuptools import setup, find_packages
@@ -26,10 +28,10 @@ setup(name='eea.forms',
         url='https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.forms',
         license='GPL',
         packages=find_packages(),
-        #packages=find_packages('src'),
-        #package_dir= {'':'src'},
         namespace_packages=['eea'],
         include_package_data=True,
         zip_safe=False,
-
+        install_requires=[
+            'setuptools',
+        ]
         )
