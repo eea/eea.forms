@@ -5,6 +5,8 @@ from os.path import join
 from setuptools import setup, find_packages
 
 def read(*pathnames):
+    """ Read
+    """
     return open(os.path.join(os.path.dirname(__file__), *pathnames)).read()
 
 name = 'eea.forms'
