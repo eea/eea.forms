@@ -3,6 +3,8 @@ Changelog
 
 0.3-dev - (2011-11-18)
 ----------------------
+* Bug fix: Removed dataservice dependency from tests
+  [voineali]
 
 0.2-dev - (2011-11-18)
 ----------------------
