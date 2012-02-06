@@ -1,6 +1,9 @@
 Changelog
 =========
 
+0.3 - (unreleased)
+------------------
+
 0.3-dev - (2011-11-18)
 ----------------------
 * Bug fix: Removed dataservice dependency from tests
