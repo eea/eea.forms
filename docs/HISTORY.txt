@@ -1,19 +1,19 @@
 Changelog
 =========
 
-0.4-dev - (2012-02-06)
+0.4-dev - (unreleased)
 ----------------------
 
-0.3-dev - (2011-11-18)
-----------------------
+0.3 - (2011-11-18)
+------------------
 * Bug fix: Removed dataservice dependency from tests
   [voineali]
 
-0.2-dev - (2011-11-18)
-----------------------
-* Rerelease broken egg  
+0.2 - (2011-11-18)
+------------------
+* Rerelease broken egg
 
-0.1-dev - (2011-07-18)
+0.1 - (2011-07-18)
 ------------------
  * Initial release [szabozo0]
  * Move ManagementPlan form & widget from eea.dataservice [szabozo0]
