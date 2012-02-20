@@ -35,5 +35,6 @@ setup(name='eea.forms',
         zip_safe=False,
         install_requires=[
             'setuptools',
+            'collective.quickupload',
         ]
         )

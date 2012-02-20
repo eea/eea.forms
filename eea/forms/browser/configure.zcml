@@ -1,0 +1,11 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="eea">
+
+  <browser:resource
+    name="eea.forms.edit.css"
+    file="./css/edit.css"
+   />
+
+</configure>

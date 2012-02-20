@@ -2,6 +2,7 @@
 """
 from Products.Archetypes.Registry import registerWidget
 from eea.forms.widgets.ManagementPlanWidget import ManagementPlanWidget
+from eea.forms.widgets.QuickUploadWidget import QuickUploadWidget
 
 def register():
     """ Custom AT registrations
@@ -14,3 +15,8 @@ def register():
         used_for=(
             'eea.forms.fields.ManagementPlanField.ManagementPlanField'))
 
+    registerWidget(QuickUploadWidget,
+        title='EEA Quick Upload',
+        description=("Allows you to drag&drop files directly "
+                     "from your computer's Desktop")
+        )
