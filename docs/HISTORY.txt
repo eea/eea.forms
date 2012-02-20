@@ -1,8 +1,16 @@
 Changelog
 =========
 
-0.4-dev - (unreleased)
+4.0-dev - (unreleased)
 ----------------------
+* Upgrade step: Within 'Site Setup > Add-ons' activate EEA Forms add-on
+  [voineali]
+* Bug fix: Moved 'management_plan_widget.pt' from eea.dataservice in order
+  to use eea.forms as a standalone package
+  [voineali]
+* Bug fix: Moved 'management_plan_code_validator' validator from
+  Products.EEAContentType as it's a dependency of ManagementPlanWidget
+  [voineali]
 
 0.3 - (2011-11-18)
 ------------------
