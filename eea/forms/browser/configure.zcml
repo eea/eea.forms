@@ -8,4 +8,9 @@
     file="./css/edit.css"
    />
 
+  <browser:resource
+    name="eea.forms.edit.js"
+    file="./js/edit.js"
+   />
+
 </configure>

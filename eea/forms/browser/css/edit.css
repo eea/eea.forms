@@ -11,3 +11,54 @@
 .eea-forms-quick-upload #label-upload {
     color: #ccc;
 }
+
+/* Group Fields */
+.eeaforms-group-accordion {
+  border: 1px dotted #ccc;
+}
+
+.eeaforms-presentation-group {
+}
+
+.eeaforms-group-accordion .ui-state-default {
+  background: whitesmoke;
+  border-bottom: 1px dotted #ccc;
+  border-radius: 0;
+}
+
+.eeaforms-group-accordion .ui-state-active {
+  background: white;
+  border-bottom: 1px dotted #ccc;
+  border-radius: 0;
+}
+
+.eeaforms-group-accordion .ui-accordion-header .ui-icon {
+  left: auto;
+  right: 5px;
+}
+
+.eeaforms-group-accordion .field {
+}
+
+#content .eeaforms-group-accordion textarea {
+  width: 98%;
+  height: 14em;
+  border: 1px solid #8CACBB;
+  background: white url(input_background.gif) repeat-x scroll 0 0;
+}
+
+#content .ui-state-default a.eeaforms-ajax {
+  color: #999 !important;
+  text-shadow: none;
+  font-size: 15px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+#content .ui-state-active a.eeaforms-ajax {
+  color: #555 !important;
+  text-shadow: none;
+  font-size: 15px;
+  text-align: right;
+  margin-right: 10px;
+}

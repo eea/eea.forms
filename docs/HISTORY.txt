@@ -5,6 +5,10 @@ Changelog
 ----------------------
 * Upgrade step: Within 'Site Setup > Add-ons' activate EEA Forms add-on
   [voineali]
+* Feature: Added a EEAFormsGroup jQuery plugin that allows you to group
+  AT Fields in edit form with jQuery UI Accordion. See eea.daviz for details
+  and usage
+  [voineali $4967]
 * Feature: Added QuickUpload Widget to easily drag&drop files from your Desktop
   [voineali #4965]
 * Bug fix: Moved 'management_plan_widget.pt' from eea.dataservice in order
