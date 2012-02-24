@@ -62,3 +62,8 @@
   text-align: right;
   margin-right: 10px;
 }
+
+h3.eeaforms-presentation-group.eeaforms-error {
+  background: #fdc;
+  border: 1px solid red;
+}
