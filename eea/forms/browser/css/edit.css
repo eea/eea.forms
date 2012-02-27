@@ -12,6 +12,12 @@
     color: #ccc;
 }
 
+/* overwrites of quickuploader */
+#label-upload {
+   padding: 18px 10px;
+   font-size: 160%;
+}
+
 /* Group Fields */
 .eeaforms-group-accordion {
   border: 1px dotted #ccc;
