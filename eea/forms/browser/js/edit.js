@@ -2,6 +2,96 @@ if(window.EEAFormsEdit === undefined){
   var EEAFormsEdit = {'version': '1.0'};
 }
 
+// Custom jQuery Tools effect
+if((jQuery.tools !== undefined) && (jQuery.tools.tabs !== undefined)){
+  jQuery.tools.tabs.addEffect("eea-forms", function(tabIndex, done) {
+    // hide all panes and show the one that is clicked
+    if(this.getPanes().effect === undefined){
+      this.getPanes().hide().eq(tabIndex).show();
+    }else{
+      var index = this.getIndex() !== undefined ? this.getIndex() : 0;
+      var direction = 'right';
+      if(tabIndex < index){
+        direction = 'left';
+      }
+      this.getPanes().hide().eq(tabIndex).show('slide', {direction: direction});
+    }
+    // the supplied callback must be called after the effect has finished its job
+    done.call();
+  });
+}
+
+
+/* Make Tabs in ATCT edit form a wizard like form
+*/
+EEAFormsEdit.Wizard = function(context, options){
+  var self = this;
+  self.context = context;
+  self.context.parent().addClass('eea-forms-wizard');
+  self.settings = {};
+
+  if(options){
+    jQuery.extend(self.settings, options);
+  }
+
+  self.initialize();
+};
+
+EEAFormsEdit.Wizard.prototype = {
+  initialize: function(){
+    var self = this;
+    self.api = self.context.data('tabs');
+    self.api.getConf().rotate = true;
+    self.api.getConf().effect = 'eea-forms';
+    self.leftButton();
+    self.rightButton();
+    self.toggleButtons();
+  },
+
+  leftButton: function(){
+    var self = this;
+    self.left = jQuery('<div>')
+      .addClass('wizard-left')
+      .html('<span>&laquo;</span>')
+      .click(function(){
+        self.api.prev();
+        self.toggleButtons();
+    }).prependTo(self.context.parent());
+  },
+
+  rightButton: function(){
+    var self = this;
+    self.right = jQuery('<div>')
+      .addClass('wizard-right')
+      .html('<span>&raquo;</span>')
+      .click(function(){
+        self.api.next();
+        self.toggleButtons();
+    }).prependTo(self.context.parent());
+  },
+
+  toggleButtons: function(){
+    var self = this;
+    self.api.getCurrentPane().css('margin-left', '3.5em');
+    self.api.getCurrentPane().css('margin-right', '3.5em');
+    self.left.height(self.api.getCurrentPane().height());
+    self.right.height(self.api.getCurrentPane().height());
+    self.left.show();
+    self.right.show();
+    if(self.api.getIndex() === 0){
+      self.left.hide();
+      self.api.getCurrentPane().css('margin-left', '0');
+    }
+    if(self.api.getIndex() === (self.api.getTabs().length - 1)){
+      self.right.hide();
+      self.api.getCurrentPane().css('margin-right', '0');
+    }
+  }
+};
+
+
+/* Group AT Widgets with jQuery UI Accordion
+*/
 EEAFormsEdit.Group = function(context, options){
   var self = this;
   self.context = context;
@@ -60,9 +150,22 @@ EEAFormsEdit.Group.prototype = {
   }
 };
 
+
+/* jQuery plugin for EEAForms.Group
+*/
 jQuery.fn.EEAFormsGroup = function(options){
   return this.each(function(){
     var context = jQuery(this).addClass('ajax');
     var spreadsheet = new EEAFormsEdit.Group(context, options);
+  });
+};
+
+
+/* jQuery plugin for EEAFormsEdit.Wizard
+*/
+jQuery.fn.EEAFormsWizard = function(options){
+  return this.each(function(){
+    var context = jQuery(this).addClass('ajax');
+    var wizard = new EEAFormsEdit.Wizard(context, options);
   });
 };

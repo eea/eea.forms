@@ -5,6 +5,9 @@ Changelog
 ----------------------
 * Upgrade step: Within 'Site Setup > Add-ons' activate EEA Forms add-on
   [voineali]
+* Feature: Added EEAFormsWizard jQuery plugin that transforms a jQuery tools
+  tabs into a wizard like form
+  [voineali #4980]
 * Feature: Added a EEAFormsGroup jQuery plugin that allows you to group
   AT Fields in edit form with jQuery UI Accordion. See eea.daviz for details
   and usage

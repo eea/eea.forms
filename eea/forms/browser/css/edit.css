@@ -73,3 +73,34 @@ h3.eeaforms-presentation-group.eeaforms-error {
   background: #fdc;
   border: 1px solid red;
 }
+
+/* Wizard */
+.eea-forms-wizard {
+  position: relative;
+}
+
+.wizard-left,
+.wizard-right {
+  font-size: 30px;
+  background: white;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.wizard-left span,
+.wizard-right span{
+  display: block;
+  margin: 2em 0.2em;
+}
+
+.wizard-left {
+  position: absolute;
+  left: 0;
+  top: 45px;
+}
+
+.wizard-right {
+  position: absolute;
+  right: 0;
+  top: 45px;
+}
