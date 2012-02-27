@@ -1,5 +1,5 @@
 .eea-forms-quick-upload {
-    border: 1px solid #8CACBB;
+    border: 2px dashed #8CACBB;
     background: white url(input_background.gif) repeat-x scroll 0 0;
     padding: 1em;
 }
