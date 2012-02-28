@@ -41,7 +41,9 @@ EEAFormsEdit.Wizard.prototype = {
   initialize: function(){
     var self = this;
     self.api = self.context.data('tabs');
-    self.api.getConf().rotate = true;
+    self.api.onClick(function(e, index){
+      self.toggleButtons(index);
+    });
     self.api.getConf().effect = 'eea-forms';
     self.leftButton();
     self.rightButton();
@@ -70,22 +72,29 @@ EEAFormsEdit.Wizard.prototype = {
     }).prependTo(self.context.parent());
   },
 
-  toggleButtons: function(){
+  toggleButtons: function(index){
     var self = this;
-    self.api.getCurrentPane().css('margin-left', '3.5em');
-    self.api.getCurrentPane().css('margin-right', '3.5em');
-    self.left.height(self.api.getCurrentPane().height());
-    self.right.height(self.api.getCurrentPane().height());
+    if(index === undefined){
+      index = self.api.getIndex();
+    }
+
+    var current = jQuery(self.api.getPanes()[index]);
+    current.css('margin-left', '3.5em');
+    current.css('margin-right', '3.5em');
+    self.left.height(current.height());
+    self.right.height(current.height());
     self.left.show();
     self.right.show();
-    if(self.api.getIndex() === 0){
+
+    if(index === 0){
       self.left.hide();
-      self.api.getCurrentPane().css('margin-left', '0');
+      current.css('margin-left', '0');
     }
-    if(self.api.getIndex() === (self.api.getTabs().length - 1)){
+    if(index === (self.api.getTabs().length - 1)){
       self.right.hide();
-      self.api.getCurrentPane().css('margin-right', '0');
+      current.css('margin-right', '0');
     }
+
   }
 };
 
@@ -157,6 +166,7 @@ jQuery.fn.EEAFormsGroup = function(options){
   return this.each(function(){
     var context = jQuery(this).addClass('ajax');
     var spreadsheet = new EEAFormsEdit.Group(context, options);
+    context.data('EEAFormsGroup', spreadsheet);
   });
 };
 
@@ -167,5 +177,6 @@ jQuery.fn.EEAFormsWizard = function(options){
   return this.each(function(){
     var context = jQuery(this).addClass('ajax');
     var wizard = new EEAFormsEdit.Wizard(context, options);
+    context.data('EEAFormsWizard', wizard);
   });
 };
