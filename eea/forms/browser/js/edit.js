@@ -54,7 +54,7 @@ EEAFormsEdit.Wizard.prototype = {
     var self = this;
     self.left = jQuery('<div>')
       .addClass('wizard-left')
-      .html('<span>&laquo;</span>')
+      .html('<span>&lsaquo;</span>')
       .click(function(){
         self.api.prev();
         self.toggleButtons();
@@ -65,7 +65,7 @@ EEAFormsEdit.Wizard.prototype = {
     var self = this;
     self.right = jQuery('<div>')
       .addClass('wizard-right')
-      .html('<span>&raquo;</span>')
+      .html('<span>&rsaquo;</span>')
       .click(function(){
         self.api.next();
         self.toggleButtons();
@@ -79,8 +79,8 @@ EEAFormsEdit.Wizard.prototype = {
     }
 
     var current = jQuery(self.api.getPanes()[index]);
-    current.css('margin-left', '3.5em');
-    current.css('margin-right', '3.5em');
+    current.css('margin-left', '4em');
+    current.css('margin-right', '4em');
     self.left.height(current.height());
     self.right.height(current.height());
     self.left.show();

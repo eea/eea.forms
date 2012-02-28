@@ -81,26 +81,48 @@ h3.eeaforms-presentation-group.eeaforms-error {
 
 .wizard-left,
 .wizard-right {
-  font-size: 30px;
   background: white;
   cursor: pointer;
   z-index: 99;
-}
-
-.wizard-left span,
-.wizard-right span{
-  display: block;
-  margin: 2em 0.2em;
-}
-
-.wizard-left {
+  min-width: 3.5em;
+  text-align: center;
   position: absolute;
-  left: 0;
-  top: 45px;
+  top: 30px;
 }
 
 .wizard-right {
-  position: absolute;
   right: 0;
-  top: 45px;
+  box-shadow: 8px 0px 10px #ccc;
+  border-radius: 0 10px 10px 0;
+}
+
+.wizard-right:hover {
+  box-shadow: 8px 0px 10px #eee;
+}
+
+.wizard-right:active {
+  box-shadow: none;
+}
+
+.wizard-left {
+  left: 0;
+  box-shadow: -8px 0px 10px #ccc;
+  border-radius: 10px 0 0 10px;
+}
+
+.wizard-left:hover {
+  box-shadow: -8px 0px 10px #eee;
+}
+
+.wizard-left:active {
+  box-shadow: none;
+}
+
+.wizard-left span,
+.wizard-right span {
+  font-size: 30px;
+  color: #777C1F;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
 }
