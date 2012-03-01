@@ -34,12 +34,18 @@ class QuickUploadWidget(QuickUploadView):
             settings['ul_file_extensions_list'] = str(ul_content_types_infos[1])
             settings['ul_file_description'] = ul_content_types_infos[2]
 
+        xhr_js = XHR_UPLOAD_JS
         if self._typeupload:
             settings['typeupload'] = self._typeupload
+            if 'params:' not in xhr_js:
+                xhr_js = xhr_js.replace(
+                    "autoUpload: auto,",
+                    "autoUpload: auto, params: {typeupload: '%(typeupload)s'},"
+                )
 
-        if quickinit.qup_prefs.use_flashupload :
+        if quickinit.qup_prefs.use_flashupload:
             return FLASH_UPLOAD_JS % settings
-        return XHR_UPLOAD_JS % settings
+        return xhr_js % settings
 
     def __call__(self, **kwargs):
         form = getattr(self.request, 'form', {})
