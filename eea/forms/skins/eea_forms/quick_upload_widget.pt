@@ -29,6 +29,10 @@
       typeupload python:widget.typeupload;
       quick_view nocall:here/aq_parent/@@quick_upload.widget;"
     tal:content="structure python:quick_view(mediaupload=mediaupload, typeupload=typeupload)" />
+    <div tal:define="autorelate python:widget.autorelate"
+      class="eea-forms-autorelate"
+      tal:condition="autorelate"
+      tal:content="autorelate" />
   </metal:upload>
 
 </body>

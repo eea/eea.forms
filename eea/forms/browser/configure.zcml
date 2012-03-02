@@ -19,4 +19,9 @@
     file="./js/edit.js"
    />
 
+  <browser:resource
+    name="eea.forms.quickupload.js"
+    file="./js/quickupload.js"
+   />
+
 </configure>

@@ -159,8 +159,55 @@ EEAFormsEdit.Group.prototype = {
   }
 };
 
+/* collective.quickupload extension to be used within QuickUpload AT Widget
+*/
+EEAFormsEdit.QuickUpload = function(context, options){
+  var self = this;
+  self.context = context;
+  self.settings = {
+    basket: null,
+    relatedItems: 'relatedItems'
+  };
 
-/* jQuery plugin for EEAForms.Group
+  if(options){
+    jQuery.extend(self.settings, options);
+  }
+
+  if(!self.settings.basket){
+    return;
+  }
+
+  // Events
+  jQuery(document).bind('qq-file-uploaded', function(evt, data){
+    self.onFileUpload(data);
+  });
+
+  self.initialize();
+};
+
+EEAFormsEdit.QuickUpload.prototype = {
+  initialize: function(){
+    var self = this;
+    self.settings.basket.empty();
+  },
+
+  onFileUpload: function(data){
+    var self = this;
+
+    var name = self.settings.relatedItems + ':list';
+
+    var label = jQuery('<label>').text(data.title);
+    self.settings.basket.append(label);
+
+    jQuery('<input>').attr('type', 'checkbox')
+      .val(data.uid)
+      .attr('checked', 'checked')
+      .attr('name', name)
+      .prependTo(label);
+  }
+};
+
+/* jQuery plugin for EEAFormsEdit.Group
 */
 jQuery.fn.EEAFormsGroup = function(options){
   return this.each(function(){
@@ -178,5 +225,15 @@ jQuery.fn.EEAFormsWizard = function(options){
     var context = jQuery(this).addClass('ajax');
     var wizard = new EEAFormsEdit.Wizard(context, options);
     context.data('EEAFormsWizard', wizard);
+  });
+};
+
+/* jQuery plugin for EEAFormsEdit.QuickUpload
+*/
+jQuery.fn.EEAFormsQuickUpload = function(options){
+  return this.each(function(){
+    var context = jQuery(this).addClass('ajax');
+    var quickUpload = new EEAFormsEdit.QuickUpload(context, options);
+    context.data('EEAFormsQuickUpload', quickUpload);
   });
 };

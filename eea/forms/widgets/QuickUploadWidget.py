@@ -23,4 +23,5 @@ class QuickUploadWidget(TypesWidget):
         'mediaupload' : '*.txt; *.csv; *.tsv; *.tab',
         'typeupload': 'File',
         'autorelate': 'relatedItems',
+        'helper_js': ('++resource++eea.forms.quickupload.js',),
     })

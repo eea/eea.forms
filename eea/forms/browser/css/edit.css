@@ -1,3 +1,5 @@
+/* QuickUpload
+*/
 .eea-forms-quick-upload {
     border: 2px dashed #8CACBB;
     background: white url(input_background.gif) repeat-x scroll 0 0;
@@ -10,6 +12,22 @@
 
 .eea-forms-quick-upload #label-upload {
     color: #ccc;
+}
+
+.eea-forms-autorelate {
+  padding: 2em;
+}
+
+.eea-forms-autorelate label {
+  float: left;
+  padding: 1em;
+  display: block;
+  border: 1px dashed #8CACBB;
+  box-shadow: 0px 2px 5px #ccc;
+}
+
+.eea-forms-autorelate input {
+  display: none;
 }
 
 /* overwrites of quickuploader */
