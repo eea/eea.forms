@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.0-dev - (unreleased)
-----------------------
+4.0 - (2012-03-05)
+------------------
 * Upgrade step: Within 'Site Setup > Add-ons' activate EEA Forms add-on
   [voineali]
 * Feature: Added EEAFormsWizard jQuery plugin that transforms a jQuery tools
