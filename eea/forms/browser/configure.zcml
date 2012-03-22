@@ -24,4 +24,9 @@
     file="./js/quickupload.js"
    />
 
+  <browser:resourceDirectory
+    name="eea.forms.images"
+    directory="./img"
+   />
+
 </configure>

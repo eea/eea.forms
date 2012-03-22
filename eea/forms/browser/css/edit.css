@@ -56,12 +56,26 @@
   border-radius: 0;
 }
 
-.eeaforms-group-accordion .ui-accordion-header .ui-icon {
-  left: auto;
-  right: 5px;
+a.eeaforms-group-help {
+  float: right;
 }
 
-.eeaforms-group-accordion .field {
+a.eeaforms-group-help,
+#content .ui-state-default a.eeaforms-group-help,
+#content .ui-state-default a.eeaforms-group-help:link,
+#content .ui-state-default a.eeaforms-group-help:visited {
+  color: #2C8DA2 !important ;
+  visibility: hidden;
+}
+
+a.eeaforms-group-help,
+#content .ui-state-active a.eeaforms-group-help,
+#content .ui-state-active a.eeaforms-group-help:link,
+#content .ui-state-active a.eeaforms-group-help:visited {
+  color: #2C8DA2 !important ;
+  visibility: visible;
+  cursor: pointer;
+  padding: 1em;
 }
 
 #content .eeaforms-group-accordion textarea {
@@ -70,21 +84,32 @@
   border: 1px solid #8CACBB;
   background: white url(input_background.gif) repeat-x scroll 0 0;
 }
+.eeaforms-group-accordion .formHelp {
+  border: 1px dotted #ccc;
+  background: #ffffe3 url(++resource++eea.forms.images/help.png) no-repeat 1em center;
+  padding: 1.5em;
+  padding-left: 5em;
+}
 
-#content .ui-state-default a.eeaforms-ajax {
+a.eeaforms-ajax,
+#content .ui-state-default a.eeaforms-ajax,
+#content .ui-state-default a.eeaforms-ajax:link,
+#content .ui-state-default a.eeaforms-ajax:visited {
   color: #999 !important;
   text-shadow: none;
   font-size: 15px;
-  text-align: right;
   margin-right: 10px;
 }
 
-#content .ui-state-active a.eeaforms-ajax {
+a.eeaforms-ajax,
+#content .ui-state-active a.eeaforms-ajax,
+#content .ui-state-active a.eeaforms-ajax:link,
+#content .ui-state-active a.eeaforms-ajax:visited {
   color: #555 !important;
   text-shadow: none;
   font-size: 15px;
-  text-align: right;
   margin-right: 10px;
+  font-weight: bold;
 }
 
 h3.eeaforms-presentation-group.eeaforms-error {

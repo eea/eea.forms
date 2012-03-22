@@ -3,6 +3,8 @@ Changelog
 
 4.1-dev - (unreleased)
 ----------------------
+* Feature: Made formHelp in accordion more user friendly
+  [voineali #4995]
 
 4.0 - (2012-03-05)
 ------------------

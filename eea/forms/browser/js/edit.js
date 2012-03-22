@@ -130,12 +130,13 @@ EEAFormsEdit.Group.prototype = {
       var label = jQuery('label.formQuestion', field);
       var title = label.text();
       label.remove();
-      field.before(
-        jQuery('<h3>').addClass('eeaforms-presentation-group')
-          .addClass(errors ? 'eeaforms-error': '').append(
-            jQuery('<a>').addClass('eeaforms-ajax')
-              .attr('href', '#' + field.attr('id')).html(title)
-          ));
+      var h3 = jQuery('<h3>').addClass('eeaforms-presentation-group')
+        .addClass(errors ? 'eeaforms-error': '').append(
+          jQuery('<a>').addClass('eeaforms-ajax')
+            .attr('href', '#' + field.attr('id')).html(title)
+          );
+      field.before(h3);
+      self.handleHelp(field, h3);
     });
 
     var parent = self.context.parent();
@@ -143,6 +144,7 @@ EEAFormsEdit.Group.prototype = {
       '<div class="eeaforms-group-accordion" />');
     var container = jQuery('.eeaforms-group-accordion', parent);
     container.accordion();
+
   },
 
   handleErrors: function(field, errors){
@@ -156,6 +158,21 @@ EEAFormsEdit.Group.prototype = {
       errorsBox = jQuery('<div>').addClass('fieldErrorBox').prependTo(field);
     }
     errorsBox.removeClass('fieldErrorBox').addClass('error').html(errors);
+  },
+
+  handleHelp: function(field, header){
+    var self = this;
+    var formHelp = jQuery('.formHelp', field);
+    var help = jQuery('<a>')
+      .attr('href', '#')
+      .addClass('eeaforms-group-help')
+      .text('Help')
+      .click(function(){
+        formHelp.toggle('blind');
+        return false;
+      });
+    header.prepend(help);
+    formHelp.hide();
   }
 };
 
