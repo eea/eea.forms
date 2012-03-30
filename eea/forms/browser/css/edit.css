@@ -58,7 +58,10 @@
 
 a.eeaforms-group-help {
   float: right;
+  background: url(++resource++eea.forms.images/help.png) no-repeat 1em center;
+  padding:1em 1em 1em 4em !important;
 }
+
 
 a.eeaforms-group-help,
 #content .ui-state-default a.eeaforms-group-help,
@@ -75,8 +78,8 @@ a.eeaforms-group-help,
   color: #2C8DA2 !important ;
   visibility: visible;
   cursor: pointer;
-  padding: 1em;
 }
+
 
 #content .eeaforms-group-accordion textarea {
   width: 98%;
@@ -86,9 +89,15 @@ a.eeaforms-group-help,
 }
 .eeaforms-group-accordion .formHelp {
   border: 1px dotted #ccc;
-  background: #ffffe3 url(++resource++eea.forms.images/help.png) no-repeat 1em center;
-  padding: 1.5em;
-  padding-left: 5em;
+  padding: 0.5em;
+  padding-left: 2.2em;
+  font-size:140% !important;
+}
+
+.eeaforms-group-accordion a {
+  font-size:100%
+  color:#000000;
+  text-decoration: underline;
 }
 
 a.eeaforms-ajax,

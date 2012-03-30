@@ -3,6 +3,9 @@ Changelog
 
 4.1-dev - (unreleased)
 ----------------------
+* Feature: Improved the form help for accordion, it was too discreet.
+  the help icon should appear on the help text etc.
+  [demarant #4995]
 * Feature: Made formHelp in accordion more user friendly
   [voineali #4995]
 
