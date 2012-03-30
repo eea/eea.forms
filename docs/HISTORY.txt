@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.1-dev - (unreleased)
-----------------------
+4.1 - (2012-03-30)
+------------------
 * Feature: Improved the form help for accordion, it was too discreet.
   the help icon should appear on the help text etc.
   [demarant #4995]
