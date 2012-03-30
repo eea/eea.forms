@@ -150,6 +150,7 @@ h3.eeaforms-presentation-group.eeaforms-error {
 
 .wizard-right:hover {
   box-shadow: 2px 0px 10px #eee;
+   background-color: #efefef;
 }
 
 .wizard-right:active {
@@ -164,6 +165,7 @@ h3.eeaforms-presentation-group.eeaforms-error {
 
 .wizard-left:hover {
   box-shadow: -2px 0px 10px #eee;
+  background-color: #efefef;
 }
 
 .wizard-left:active {
