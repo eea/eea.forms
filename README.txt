@@ -37,6 +37,7 @@ either version 2 of the License, or (at your option) any later
 version.
 
 Contributor(s): Alin Voinea (Eau de Web),
+                Zoltan Szabo (Eau de Web),
                 Tiberiu Ichim (Eau de Web),
                 Alec Ghica (Eau de Web),
                 Antonio De Marinis (European Environment Agency)

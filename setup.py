@@ -16,9 +16,8 @@ version = open(join(*path)).read().strip()
 setup(name='eea.forms',
         version=version,
         description="EEA forms",
-        long_description='\n'.join([
-            read('docs', 'HISTORY.txt'),
-            ]),
+        long_description=(open("README.txt").read() + "\n" +
+                          open(os.path.join("docs", "HISTORY.txt")).read()),
         classifiers=[
             "Framework :: Plone",
             "Framework :: Zope2",
