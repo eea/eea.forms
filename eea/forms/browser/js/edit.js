@@ -145,6 +145,9 @@ EEAFormsEdit.Group.prototype = {
     var container = jQuery('.eeaforms-group-accordion', parent);
     container.accordion();
 
+    jQuery.each(self.settings.group, function(index, field){
+      field.height('auto');
+    });
   },
 
   handleErrors: function(field, errors){
