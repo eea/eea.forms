@@ -223,7 +223,7 @@ EEAFormsEdit.QuickUpload.prototype = {
       .val(data.uid)
       .attr('checked', 'checked')
       .attr('name', name)
-      .prependTo(label);
+      .prependTo(self.settings.basket);
   }
 };
 
