@@ -59,6 +59,14 @@ EEAFormsEdit.Wizard.prototype = {
         self.api.prev();
         self.toggleButtons();
     }).prependTo(self.context.parent());
+
+    jQuery(document).bind('eea-wizard-changed', function(evt, data){
+      data = data || {};
+      var parent_height = self.left.parent().height() - 70;
+      var height = data.height || parent_height || '80%';
+      self.left.height(height);
+      self.right.height(height);
+    });
   },
 
   rightButton: function(){
@@ -81,8 +89,7 @@ EEAFormsEdit.Wizard.prototype = {
     var current = jQuery(self.api.getPanes()[index]);
     current.css('margin-left', '4em');
     current.css('margin-right', '4em');
-    self.left.height(current.height());
-    self.right.height(current.height());
+    jQuery(document).trigger('eea-wizard-changed', {height: current.height()});
     self.left.show();
     self.right.show();
 
@@ -143,7 +150,11 @@ EEAFormsEdit.Group.prototype = {
     jQuery('.eeaforms-presentation-group', parent).wrapAll(
       '<div class="eeaforms-group-accordion" />');
     var container = jQuery('.eeaforms-group-accordion', parent);
-    container.accordion();
+    container.accordion({
+      change: function(evt, ui){
+        jQuery(document).trigger('eea-wizard-changed');
+      }
+    });
 
     jQuery.each(self.settings.group, function(index, field){
       field.height('auto');

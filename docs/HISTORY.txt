@@ -3,8 +3,11 @@ Changelog
 
 4.2-dev - (unreleased)
 ----------------------
+* Bug fix: Refresh wizard left and right buttons height when wizard body height
+  is changed (insertion/extraction of dom elements)
+  [voineali refs #5072]
 * Bug fix: Fixed accordion height when edit form fails to submit with errors
-  [voineali #5072]
+  [voineali refs #5072]
 
 4.1 - (2012-03-30)
 ------------------
