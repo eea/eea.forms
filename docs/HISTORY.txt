@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.2-dev - (unreleased)
-----------------------
+4.2 - (2012-04-26)
+------------------
 * Bug fix: Refresh wizard left and right buttons height when wizard body height
   is changed (insertion/extraction of dom elements)
   [voineali refs #5072]
