@@ -14,7 +14,7 @@ if((jQuery.tools !== undefined) && (jQuery.tools.tabs !== undefined)){
       if(tabIndex < index){
         direction = 'left';
       }
-      this.getPanes().hide().eq(tabIndex).show('slide', {direction: direction});
+      this.getPanes().hide().eq(tabIndex).EEASlide({duration: 500, easing: 'swing', direction: direction});
     }
     // the supplied callback must be called after the effect has finished its job
     done.call();
@@ -267,4 +267,47 @@ jQuery.fn.EEAFormsQuickUpload = function(options){
     var quickUpload = new EEAFormsEdit.QuickUpload(context, options);
     context.data('EEAFormsQuickUpload', quickUpload);
   });
+};
+
+/*!
+ * Customized jQuery UI Effects Slide to get rid of createWrapper
+ */
+jQuery.fn.EEASlide = function(options) {
+
+    return this.queue(function() {
+
+        // Create element
+        var el = jQuery(this);
+
+        // Set options
+        var mode = options.mode || 'show'; // Set Mode
+        var direction = options.direction || 'left'; // Default Direction
+        var easing = options.easing || 'swing';
+
+        // Adjust
+         el.show().css('position', 'relative'); // Save & Show
+        
+        var ref = (direction == 'up' || direction == 'down') ? 'top' : 'left';
+        var motion = (direction == 'up' || direction == 'left') ? 'pos' : 'neg';
+        var distance = options.distance || (ref == 'top' ? el.outerHeight({margin:true}) : el.outerWidth({margin:true}));
+        if (mode == 'show'){ 
+            el.css(ref, motion == 'pos' ? (isNaN(distance) ? "-" + distance : -distance) : distance); // Shift
+        }
+        var pos = parseInt(el.css('left'), 10);
+            pos = pos < 0 ? pos * -1 : pos;
+        distance =  pos > distance ? pos : distance; 
+        // Animation
+        var animation = {};
+        animation[ref] = (mode == 'show' ? (motion == 'pos' ? '+=' : '-=') : (motion == 'pos' ? '-=' : '+=')) + distance;
+      
+        // Animate
+        el.animate(animation, { queue: false, duration: options.duration, easing: easing, complete: function() {
+            if(mode == 'hide'){ el.hide(); }// Hide           
+            if(options.callback){ 
+                options.callback.apply(this, arguments); // Callback 
+            }
+            el.dequeue();
+        }});
+
+    });
 };

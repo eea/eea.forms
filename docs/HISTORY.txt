@@ -3,6 +3,9 @@ Changelog
 
 4.4-dev - (unreleased)
 ----------------------
+* Bug fix: use new slide method which doesn't evaluate scripts when moving
+  between panels
+  [ichimdav #5339]
 * Bug Fix: Fixed i18n:domain in *.zpt 
   [prospchr refs #5162]
 
