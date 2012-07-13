@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.4-dev - (unreleased)
-----------------------
+4.4 - (2012-07-13)
+------------------
 * Bug fix: use new slide method which doesn't evaluate scripts when moving
   between panels
   [ichimdav #5339]
