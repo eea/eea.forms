@@ -6,15 +6,17 @@ if(window.EEAFormsEdit === undefined){
 if((jQuery.tools !== undefined) && (jQuery.tools.tabs !== undefined)){
   jQuery.tools.tabs.addEffect("eea-forms", function(tabIndex, done) {
     // hide all panes and show the one that is clicked
-    if(this.getPanes().effect === undefined){
-      this.getPanes().hide().eq(tabIndex).show();
+    var easing = jQuery.easing.easeOutQuad ? 'easeOutQuad' : 'swing';
+    var panes = this.getPanes();
+    if(panes.effect === undefined){
+      panes.hide().eq(tabIndex).show();
     }else{
       var index = this.getIndex() !== undefined ? this.getIndex() : 0;
       var direction = 'right';
       if(tabIndex < index){
         direction = 'left';
       }
-      this.getPanes().hide().eq(tabIndex).EEASlide({duration: 500, easing: 'swing', direction: direction});
+      panes.hide().eq(tabIndex).EEASlide({duration: 500, easing: easing, direction: direction});
     }
     // the supplied callback must be called after the effect has finished its job
     done.call();
@@ -283,9 +285,11 @@ jQuery.fn.EEASlide = function(options) {
         var mode = options.mode || 'show'; // Set Mode
         var direction = options.direction || 'left'; // Default Direction
         var easing = options.easing || 'swing';
+        var parent = el.parent();
 
         // Adjust
          el.show().css('position', 'relative'); // Save & Show
+         parent.css('overflow', 'hidden');
         
         var ref = (direction == 'up' || direction == 'down') ? 'top' : 'left';
         var motion = (direction == 'up' || direction == 'left') ? 'pos' : 'neg';
@@ -307,6 +311,7 @@ jQuery.fn.EEASlide = function(options) {
                 options.callback.apply(this, arguments); // Callback 
             }
             el.dequeue();
+            parent.css('overflow', '');
         }});
 
     });
