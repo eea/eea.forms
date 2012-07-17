@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.5-dev - (unreleased)
-----------------------
+4.5 - (2012-07-17)
+------------------
 * Bug fix: set overflow hidden on parent when using the slide animation in
   order to avoid visual artifacts
   [ichimdav #5339]
