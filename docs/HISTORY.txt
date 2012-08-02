@@ -3,6 +3,8 @@ Changelog
 
 4.6-dev - (unreleased)
 ----------------------
+* Bug fix: Fixed .formHelp when using with Plone 4.2
+  [voineali refs #5381]
 
 4.5 - (2012-07-17)
 ------------------

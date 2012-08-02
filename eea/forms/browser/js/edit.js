@@ -137,6 +137,7 @@ EEAFormsEdit.Group.prototype = {
       self.handleErrors(field, errors);
       field.addClass('eeaforms-presentation-group');
       var label = jQuery('label.formQuestion', field);
+      label.after(jQuery('.formHelp', field).css('display', 'block'));
       var title = label.text();
       label.remove();
       var h3 = jQuery('<h3>').addClass('eeaforms-presentation-group')
@@ -290,25 +291,25 @@ jQuery.fn.EEASlide = function(options) {
         // Adjust
          el.show().css('position', 'relative'); // Save & Show
          parent.css('overflow', 'hidden');
-        
+
         var ref = (direction == 'up' || direction == 'down') ? 'top' : 'left';
         var motion = (direction == 'up' || direction == 'left') ? 'pos' : 'neg';
         var distance = options.distance || (ref == 'top' ? el.outerHeight({margin:true}) : el.outerWidth({margin:true}));
-        if (mode == 'show'){ 
+        if (mode == 'show'){
             el.css(ref, motion == 'pos' ? (isNaN(distance) ? "-" + distance : -distance) : distance); // Shift
         }
         var pos = parseInt(el.css('left'), 10);
             pos = pos < 0 ? pos * -1 : pos;
-        distance =  pos > distance ? pos : distance; 
+        distance =  pos > distance ? pos : distance;
         // Animation
         var animation = {};
         animation[ref] = (mode == 'show' ? (motion == 'pos' ? '+=' : '-=') : (motion == 'pos' ? '-=' : '+=')) + distance;
-      
+
         // Animate
         el.animate(animation, { queue: false, duration: options.duration, easing: easing, complete: function() {
-            if(mode == 'hide'){ el.hide(); }// Hide           
-            if(options.callback){ 
-                options.callback.apply(this, arguments); // Callback 
+            if(mode == 'hide'){ el.hide(); }// Hide
+            if(options.callback){
+                options.callback.apply(this, arguments); // Callback
             }
             el.dequeue();
             parent.css('overflow', '');

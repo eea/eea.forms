@@ -56,10 +56,12 @@
   border-radius: 0;
 }
 
+.ui-accordion-icons .ui-accordion-header a.eeaforms-group-help,
 a.eeaforms-group-help {
-  float: right;
+  position: absolute;
+  right: 0;
   background: url(++resource++eea.forms.images/help.png) no-repeat 1em center;
-  padding:1em 1em 1em 4em !important;
+  padding:1em 1em 1em 4em;
 }
 
 
