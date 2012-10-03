@@ -1,7 +1,6 @@
 """ Installer
 """
 import os
-from os.path import join
 from setuptools import setup, find_packages
 
 NAME = 'eea.forms'
