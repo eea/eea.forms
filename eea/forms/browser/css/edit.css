@@ -44,13 +44,13 @@
 .eeaforms-presentation-group {
 }
 
-.eeaforms-group-accordion .ui-state-default {
+.eeaforms-group-accordion.ui-accordion .eeaforms-presentation-group.ui-state-default {
   background: whitesmoke;
   border-bottom: 1px dotted #ccc;
   border-radius: 0;
 }
 
-.eeaforms-group-accordion .ui-state-active {
+.eeaforms-group-accordion.ui-accordion .eeaforms-presentation-group.ui-state-active {
   background: white;
   border-bottom: 1px dotted #ccc;
   border-radius: 0;
