@@ -3,6 +3,8 @@ Changelog
 
 4.7-dev - (unreleased)
 ----------------------
+* Change: Updated README and egg's metadata
+  [voineali refs #5434]
 
 4.6 - (2012-08-10)
 ------------------

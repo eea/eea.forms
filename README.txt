@@ -1,5 +1,10 @@
+=========
+EEA Forms
+=========
+
 Introduction
 ============
+
 This package is a collection of custom AT Widgets and Fields:
   - Quick Upload Widget based on collective.quickupload
   - Management Plan Widget/Field
@@ -10,6 +15,12 @@ It also provides some custom jQuery plugins:
   - EEAFormsQuickUpload -- collective.quickupload jQuery plugin to be used with
     QuickUpload Widget.
 
+.. note ::
+
+  This add-on doesn't do anything by itself. It needs to be integrated by a
+  developer within your own products. For reference you can check
+  the `eea.daviz`_ package.
+
 
 Contents
 ========
@@ -17,12 +28,55 @@ Contents
 .. contents::
 
 
-Install
-=======
+Installation
+============
 
- - Add eea.forms to your eggs and zcml section in your buildout and
-   re-run buildout.
- - Install eea.forms within Site Setup > Add-ons
+zc.buildout
+-----------
+If you are using `zc.buildout`_ and the `plone.recipe.zope2instance`_
+recipe to manage your project, you can do this:
+
+* Update your buildout.cfg file:
+
+  * Add ``eea.forms`` to the list of eggs to install
+  * Tell the `plone.recipe.zope2instance`_ recipe to install a ZCML slug
+
+  ::
+
+    [instance]
+    ...
+    eggs =
+      ...
+      eea.forms
+
+    zcml =
+      ...
+      eea.forms
+
+* Re-run buildout, e.g. with::
+
+  $ ./bin/buildout
+
+You can skip the ZCML slug if you are going to explicitly include the package
+from another package's configure.zcml file.
+
+* Install eea.forms within Site Setup > Add-ons
+
+
+Dependencies
+============
+
+`EEA Forms`_ has the following dependencies:
+  - Plone 4+
+  - collective.quickupload
+
+
+Source code
+===========
+
+Latest source code (Plone 4 compatible):
+  - http://github.com/eea/eea.forms
+  - http://github.com/collective/eea.forms
 
 
 Copyright and license
@@ -30,17 +84,11 @@ Copyright and license
 The Initial Owner of the Original Code is European Environment Agency (EEA).
 All Rights Reserved.
 
-The EEA Forms (the Original Code) is free software;
+The eea.forms (the Original Code) is free software;
 you can redistribute it and/or modify it under the terms of the GNU
 General Public License as published by the Free Software Foundation;
 either version 2 of the License, or (at your option) any later
 version.
-
-Contributor(s): Alin Voinea (Eau de Web),
-                Zoltan Szabo (Eau de Web),
-                Tiberiu Ichim (Eau de Web),
-                Alec Ghica (Eau de Web),
-                Antonio De Marinis (European Environment Agency)
 
 More details under docs/License.txt
 
@@ -48,6 +96,9 @@ More details under docs/License.txt
 Funding
 =======
 
-  EEA_ - European Enviroment Agency (EU)
+  EEA_ - European Environment Agency (EU)
 
 .. _EEA: http://www.eea.europa.eu/
+.. _`eea.daviz`: http://eea.github.com/docs/eea.daviz
+.. _`plone.recipe.zope2instance`: http://pypi.python.org/pypi/plone.recipe.zope2instance
+.. _`zc.buildout`: http://pypi.python.org/pypi/zc.buildout
