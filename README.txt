@@ -22,9 +22,6 @@ It also provides some custom jQuery plugins:
   the `eea.daviz`_ package.
 
 
-Contents
-========
-
 .. contents::
 
 
@@ -75,8 +72,8 @@ Source code
 ===========
 
 Latest source code (Plone 4 compatible):
-  - http://github.com/eea/eea.forms
-  - http://github.com/collective/eea.forms
+  - `Plone Collective on Github <https://github.com/collective/eea.forms>`_
+  - `EEA on Github <https://github.com/eea/eea.forms>`_
 
 
 Copyright and license
