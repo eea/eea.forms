@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.7-dev - (unreleased)
-----------------------
+5.0 - (2012-10-08)
+------------------
 * Bug fix: Fixed CSS when used together with eea.facetednavigation
   [voineali refs #5550]
 * Change: Updated README and egg's metadata
