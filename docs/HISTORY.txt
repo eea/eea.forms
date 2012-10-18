@@ -3,6 +3,8 @@ Changelog
 
 5.1-dev - (unreleased)
 ----------------------
+* Bug fix: Fixed
+  [szabozo0 refs #5568]
 
 5.0 - (2012-10-08)
 ------------------

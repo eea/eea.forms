@@ -296,7 +296,19 @@ jQuery.fn.EEASlide = function(options) {
         var motion = (direction == 'up' || direction == 'left') ? 'pos' : 'neg';
         var distance = options.distance || (ref == 'top' ? el.outerHeight({margin:true}) : el.outerWidth({margin:true}));
         if (mode == 'show'){
-            el.css(ref, motion == 'pos' ? (isNaN(distance) ? "-" + distance : -distance) : distance); // Shift
+            var tmp_pos = motion == 'pos' ? (isNaN(distance) ? "-" + distance : -distance) : distance;
+            el.css(ref, tmp_pos); // Shift
+
+            // fix for chrome when page is zoomed
+            if (el.css(ref) != tmp_pos){
+                // if the position is different than what we wanted, 
+                // recalculate it with the ratio between the original value and the one we get from the element
+                var el_pos = el.css(ref);
+                var ratio = tmp_pos/parseInt(el_pos);
+                el.css(ref, tmp_pos * ratio);
+            }
+            // end of fix
+
         }
         var pos = parseInt(el.css('left'), 10);
             pos = pos < 0 ? pos * -1 : pos;
