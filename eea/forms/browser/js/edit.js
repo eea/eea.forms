@@ -304,7 +304,7 @@ jQuery.fn.EEASlide = function(options) {
                 // if the position is different than what we wanted, 
                 // recalculate it with the ratio between the original value and the one we get from the element
                 var el_pos = el.css(ref);
-                var ratio = tmp_pos/parseInt(el_pos);
+                var ratio = tmp_pos/parseInt(el_pos, 10);
                 el.css(ref, tmp_pos * ratio);
             }
             // end of fix
