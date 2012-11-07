@@ -1,6 +1,10 @@
 =========
 EEA Forms
 =========
+.. image:: http://ci.eionet.europa.eu/job/eea.forms-www/badge/icon
+  :target: http://ci.eionet.europa.eu/job/eea.forms-www/lastBuild
+.. image:: http://ci.eionet.europa.eu/job/eea.forms-plone4/badge/icon
+  :target: http://ci.eionet.europa.eu/job/eea.forms-plone4/lastBuild
 
 Introduction
 ============
