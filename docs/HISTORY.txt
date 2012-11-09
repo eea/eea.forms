@@ -3,6 +3,8 @@ Changelog
 
 5.1-dev - (unreleased)
 ----------------------
+* Feature: Added i18n translations
+  [avoinea]
 * Bug fix: Fixed overlay issue in chrome when page is zoomed
   [szabozo0 refs #5568]
 
