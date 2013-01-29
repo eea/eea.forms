@@ -1,6 +1,6 @@
 """ Management Plan
 """
-from Products.Archetypes.atapi import ObjectField, LinesField, 
+from Products.Archetypes.atapi import ObjectField, LinesField
 from Products.Archetypes.Field import encode
 
 class ManagementPlanField(LinesField):
