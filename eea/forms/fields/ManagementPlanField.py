@@ -1,9 +1,9 @@
 """ Management Plan
 """
-from Products.Archetypes.atapi import ObjectField, StringField
+from Products.Archetypes.atapi import ObjectField, LinesField, 
 from Products.Archetypes.Field import encode
 
-class ManagementPlanField(StringField):
+class ManagementPlanField(LinesField):
     """ Save management plan year and code
     """
 
