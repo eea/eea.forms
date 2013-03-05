@@ -6,6 +6,8 @@ Changelog
 
 5.2 - (2013-02-04)
 ------------------
+* Feature: added information for contributors
+  [ciobabog refs #13892]
 * Bug fix: changed type of ManagementPlan field to LinesField in order for the
   versioning diff to work on this field
   [ichimdav #13677]
