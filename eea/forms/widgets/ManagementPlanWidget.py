@@ -5,7 +5,10 @@ from Products.Archetypes.Widget import TypesWidget
 from zope.app.form.browser.interfaces import IBrowserWidget
 from zope.app.form.interfaces import IInputWidget
 from zope.app.form.interfaces import WidgetInputError
-from zope.app.pagetemplate import ViewPageTemplateFile
+try:
+    from zope.app.pagetemplate import ViewPageTemplateFile
+except ImportError: # plone 4.3
+    from zope.browserpage import ViewPageTemplateFile
 from zope.interface import implements
 from zope.schema import Field
 from zope.schema.vocabulary import getVocabularyRegistry
