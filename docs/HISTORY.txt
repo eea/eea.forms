@@ -6,8 +6,8 @@ Changelog
 
 5.3 - (2013-05-29)
 ------------------
-* Feature: Plone 4.3 compatibility
-* Feature: Added brazilian portuguese translation
+* Feature: Plone 4.3 compatibility [lepri]
+* Feature: Added brazilian portuguese translation [lepri]
 
 5.2 - (2013-02-04)
 ------------------
