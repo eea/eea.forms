@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.4-dev - (unreleased)
+----------------------
+
 5.3 - (2013-05-29)
 ------------------
 * Feature: Plone 4.3 compatibility
