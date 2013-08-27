@@ -4,6 +4,13 @@
   i18n_domain="eea">
 
   <browser:page
+    for="zope.interface.Interface"
+    name="formatTempCoverage"
+    class=".app.temporal_coverage.FormatTempCoverage"
+    permission="zope2.View"
+    />
+
+  <browser:page
     for="collective.quickupload.browser.interfaces.IQuickUploadCapable"
     name="quick_upload.widget"
     class=".app.quick_upload.QuickUploadWidget"

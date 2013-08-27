@@ -3,6 +3,9 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Change: Moved temporalCoverage field/widget helpers from eea.dataservice
+  in order to easily be reused by other packages like eea.soercontent
+  [voineali refs #14900]
 
 5.3 - (2013-05-29)
 ------------------
