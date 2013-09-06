@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.5-dev - (unreleased)
+----------------------
+
 5.4 - (2013-09-06)
 ------------------
 * Change: Moved temporalCoverage field/widget helpers from eea.dataservice
