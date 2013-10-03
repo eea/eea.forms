@@ -4,7 +4,7 @@ from AccessControl import ClassSecurityInfo
 from Products.Archetypes.Widget import TypesWidget
 from zope.app.form.browser.interfaces import IBrowserWidget
 from zope.app.form.interfaces import IInputWidget
-from zope.app.form.interfaces import WidgetInputError
+from zope.formlib.interfaces import WidgetInputError
 try:
     from zope.app import pagetemplate 
     ViewPageTemplateFile = pagetemplate.ViewPageTemplateFile
