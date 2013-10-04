@@ -4,7 +4,7 @@ Changelog
 5.5-dev - (unreleased)
 ----------------------
 * Change: updated zope imports with the versions that require minimum Plone 4.1
-  for eea.forms 
+  for eea.forms
   [ichimdav refs #15651]
 
 5.4 - (2013-09-06)
