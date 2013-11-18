@@ -1,5 +1,12 @@
 """ Temporal coverage widget
 """
+
+try:
+    from Products.EEAContentTypes.interfaces import ITemporalCoverageAdapter
+    HAS_TEMPORALCOVERAGE_ADAPTER = True
+except ImportError:
+    HAS_TEMPORALCOVERAGE_ADAPTER = False
+
 class FormatTempCoverage(object):
     """ Format temporal coverage display
     """
@@ -9,8 +16,20 @@ class FormatTempCoverage(object):
         self.request = request
 
     def __call__(self):
-        field = self.context.getField('temporalCoverage')
-        data = field.getAccessor(self.context)()
+        data = []
+        if HAS_TEMPORALCOVERAGE_ADAPTER:
+            try:
+                adapter = ITemporalCoverageAdapter(self.context)
+                data = adapter.value()
+            except (AttributeError, TypeError):
+                return False
+        else:
+            field = self.context.getField('temporalCoverage')
+            if field:
+                data = field.getAccessor(self.context)()
+                if not data:
+                    return False
+
         data = sorted(list(data))
 
         #in one odd case, the data is sorted in the wrong way, so we reverse

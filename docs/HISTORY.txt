@@ -3,6 +3,9 @@ Changelog
 
 5.6-dev - (unreleased)
 ----------------------
+* Change: temporalCoverage helpers can now receive the field value from a
+  adapter within EEA context
+  [ichimdav refs #16719]
 
 5.5 - (2013-10-04)
 ------------------
