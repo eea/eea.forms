@@ -2,7 +2,7 @@
 """
 
 try:
-    from Products.EEAContentTypes.interfaces import ITemporalCoverageAdapter
+    from eea.dataservice.interfaces import ITemporalCoverageAdapter
     HAS_TEMPORALCOVERAGE_ADAPTER = True
 except ImportError:
     HAS_TEMPORALCOVERAGE_ADAPTER = False
