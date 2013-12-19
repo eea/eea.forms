@@ -3,6 +3,9 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Feature: added eea_forms_macros skin layer which will hold common macros
+  used throughout the other EEA packages
+  [ichimdav refs #17611]
 
 5.7 - (2013-11-29)
 ------------------

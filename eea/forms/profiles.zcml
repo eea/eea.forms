@@ -16,4 +16,11 @@
     provides="Products.GenericSetup.interfaces.EXTENSION"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
 
+  <genericsetup:registerProfile
+    name="upgrade58"
+    title="EEA Forms 5.8 Upgrade Profile"
+    directory="profiles/upgrade/to_58"
+    description="EEA Forms 5.8 Upgrade Profile"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
 </configure>

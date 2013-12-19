@@ -8,6 +8,7 @@
   <include file="skins.zcml" />
 
   <include package=".browser" />
+  <include package=".upgrades" />
   <include package=".widgets" />
 
 </configure>
