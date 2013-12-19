@@ -1,15 +1,3 @@
-<!-- Tooltip macro -->
-<metal:tooltip define-macro="tooltip"
-        tal:define="tooltip tooltip|field/widget/description|nothing;
-        portal_state context/@@plone_portal_state;
-        portal_url portal_state/portal_url"
-        tal:condition="tooltip">
-    <img class="eea-flexible-tooltip-right"
-         src="information.png"
-         title=""
-            tal:attributes="src string:${portal_url}/information.png;
-            title tooltip" />
-</metal:tooltip>
 
 <!-- Geotags -->
 <tal:block metal:define-macro="geotags-listing">
@@ -18,7 +6,7 @@
         <dt
                 tal:define='tooltip python:context.translate("Geographical coverage", domain="eea")'
                 metal:define-slot="geotags-listing-title">
-            <metal:basic use-macro="here/eeafields_macros/macros/tooltip" />
+            <metal:basic use-macro="here/interface_elements_macros/macros/tooltip" />
             <span i18n:translate="">Geographical coverage:</span>
         </dt>
         <p class="table-definition-map">
