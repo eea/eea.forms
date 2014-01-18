@@ -6,6 +6,8 @@ Changelog
 * Feature: added eea_forms_macros skin layer which will hold common macros
   used throughout the other EEA packages
   [ichimdav refs #17611]
+* Feature: adding Sphinx-generated documentation in Page Template format
+  [batradav refs #9502]
 
 5.7 - (2013-11-29)
 ------------------
