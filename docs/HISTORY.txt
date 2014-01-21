@@ -3,6 +3,8 @@ Changelog
 
 5.8-dev - (unreleased)
 ----------------------
+* Bug fix: removed wrongly added blockquotes within README.rst
+  [ichim-david refs #18064]
 * Feature: added eea_forms_macros skin layer which will hold common macros
   used throughout the other EEA packages
   [ichimdav refs #17611]

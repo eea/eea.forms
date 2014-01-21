@@ -97,7 +97,7 @@ More details under docs/License.txt
 Funding
 =======
 
-  EEA_ - European Environment Agency (EU)
+EEA_ - European Environment Agency (EU)
 
 .. _EEA: http://www.eea.europa.eu/
 .. _`eea.daviz`: http://eea.github.com/docs/eea.daviz
