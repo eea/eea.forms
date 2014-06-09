@@ -1,11 +1,38 @@
 """ Temporal coverage widget
 """
 
+
+from operator import itemgetter
+from itertools import groupby
+
 try:
     from Products.EEAContentTypes.interfaces import ITemporalCoverageAdapter
     HAS_TEMPORALCOVERAGE_ADAPTER = True
 except ImportError:
     HAS_TEMPORALCOVERAGE_ADAPTER = False
+
+
+def grouped_coverage(data):
+
+    source = [int(x) for x in sorted(set(data))]
+    output = []
+
+
+    def group_func(idx_nr):
+        index, number = idx_nr
+        return index - number
+
+
+    for key, group in groupby(enumerate(source), group_func):
+        result = map(itemgetter(1), group)
+
+        if len(result) == 1:
+            output.append("{0}".format(result[0]))
+        else:
+            output.append("{0}-{1}".format(result[0], result[-1]))
+
+    return output
+
 
 class FormatTempCoverage(object):
     """ Format temporal coverage display
@@ -30,37 +57,4 @@ class FormatTempCoverage(object):
                 if not data:
                     return False
 
-        data = sorted(list(data))
-
-        #in one odd case, the data is sorted in the wrong way, so we reverse
-        #only if we need to
-        if len(data) > 1 and (int(data[-1]) < int(data[0])):
-            data.reverse()
-
-        tmp_res = []
-        res = ''
-
-        for index, year in enumerate(data):
-            if len(tmp_res) == 0:
-                tmp_res.append(str(year))
-            else:
-                if int(data[index - 1]) + 1 == int(year):
-                    tmp_res.append('-%s' % str(year))
-                else:
-                    tmp_res.append(str(year))
-
-        for index, year in enumerate(tmp_res):
-            if index == 0:
-                res += year
-            elif index + 1 == len(tmp_res):
-                res += ', %s' % year
-            elif not year.startswith('-'):
-                res += ', %s' % year
-            elif not tmp_res[index + 1].startswith('-'):
-                res += ', %s' % year
-            elif year.startswith('-') and not tmp_res[index + 1].startswith(
-                    '-'):
-                res += ', %s' % year
-            elif year.startswith('-') and tmp_res[index + 1].startswith('-'):
-                pass
-        return res.replace(', -', '-')
+        return ", ".join(grouped_coverage(data))
