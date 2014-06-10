@@ -3,6 +3,9 @@ Changelog
 
 6.0-dev - (unreleased)
 ----------------------
+* Feature: dynamic coverage and input constraints
+  for temporalCoverage widget
+  [batradav refs #7973]
 
 5.9 - (2014-06-10)
 ------------------

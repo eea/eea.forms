@@ -2,7 +2,6 @@
 """
 
 
-from operator import itemgetter
 from itertools import groupby
 
 try:
@@ -13,18 +12,22 @@ except ImportError:
 
 
 def grouped_coverage(data):
+    """ Given an iterable of numbers, group them by range
+    """
 
     source = [int(x) for x in sorted(set(data))]
     output = []
 
 
     def group_func(idx_nr):
+        """ Used as comparator for grouping
+        """
         index, number = idx_nr
         return index - number
 
 
-    for key, group in groupby(enumerate(source), group_func):
-        result = map(itemgetter(1), group)
+    for _key, group in groupby(enumerate(source), group_func):
+        result = [x[1] for x in group]
 
         if len(result) == 1:
             output.append("{0}".format(result[0]))

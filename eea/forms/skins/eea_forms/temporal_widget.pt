@@ -42,6 +42,13 @@
 
           <metal:fill fill-slot="widget_body">
 
+          <p>
+             <label i18n:translate="">
+               <input type="checkbox" id="temporal_btn" tal:attributes="checked python:'checked' if '-1' in value else None"/>
+               Dynamic Temporal Coverage
+             </label>
+          </p>
+
           <textarea
             tal:attributes="name string:${fieldName}:lines; id fieldName"
             tal:content="python:widget.formatted_value(value)">
