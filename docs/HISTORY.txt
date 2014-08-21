@@ -3,6 +3,9 @@ Changelog
 
 6.1-dev - (unreleased)
 ----------------------
+* Change: tags are now added and removed on the textarea to reflect the changes
+  that can occour when using the jQuery token with the temporalCoverage widget
+  [ichimdav refs #20302]
 
 6.0 - (2014-06-30)
 ------------------

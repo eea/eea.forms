@@ -60,6 +60,22 @@
       onReady: function(){
         check_is_dynamic(dynamic);
       },
+      onAdd: function(item) {
+          field[0].innerHTML += "\n" + item.name;
+      },
+      onDelete: function(item) {
+          var contents = field[0];
+          var tokens = contents.innerHTML.split('\n');
+          var item_name = item.name;
+          var i, length, token, output = [];
+          for (i = 0, length = tokens.length; i < length; i += 1) {
+              token = tokens[i];
+              if (token !== item_name) {
+                output.push(token);
+              }
+          }
+        contents.innerHTML = output.join('\n');
+      },
       prePopulate: get_tokenInput_values(),
       allowNewTokens: true
     });
