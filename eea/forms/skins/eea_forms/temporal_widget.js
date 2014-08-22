@@ -65,6 +65,9 @@
           context.value += "\n" + item.name;
       },
       onDelete: function(item) {
+          if (!item) {
+              return;
+          }
           var context = field[0];
           var tokens = context.value.split('\n');
           var item_name = item.name;
