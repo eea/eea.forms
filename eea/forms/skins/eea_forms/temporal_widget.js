@@ -62,12 +62,13 @@
       },
       onAdd: function(item) {
           var context = field[0];
-          context.value += "\n" + item.name;
+          var current_tags = context.value.split('\n');
+          var new_tag_name = item.name;
+          if (current_tags.indexOf(new_tag_name) === -1) {
+              context.value += "\n" + new_tag_name;
+          }
       },
       onDelete: function(item) {
-          if (!item) {
-              return;
-          }
           var context = field[0];
           var tokens = context.value.split('\n');
           var item_name = item.name;
