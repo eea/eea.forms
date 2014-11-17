@@ -6,6 +6,8 @@ Changelog
 * Change: disable macro from arcgis geotags viewer, 
   as it creates too many requests.
   [demarant refs #21121]
+* Change: updated eea.geotags field labels
+  [ghicaale refs #21458]
 
 6.1 - (2014-08-27)
 ------------------

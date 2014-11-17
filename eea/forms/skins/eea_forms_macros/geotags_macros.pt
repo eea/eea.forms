@@ -4,10 +4,10 @@
     <div id="geotags">
 
         <dt
-                tal:define='tooltip python:context.translate("Geographical coverage", domain="eea")'
+                tal:define='tooltip python:context.translate("Geographic coverage describes the locations/places covered by the content item.", domain="eea")'
                 metal:define-slot="geotags-listing-title">
             <metal:basic use-macro="here/interface_elements_macros/macros/tooltip" />
-            <span i18n:translate="">Geographical coverage:</span>
+            <span i18n:translate="">Geographic coverage:</span>
         </dt>
 
         <tal:geotagsListing
