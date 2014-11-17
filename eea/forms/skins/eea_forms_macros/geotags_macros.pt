@@ -9,13 +9,6 @@
             <metal:basic use-macro="here/interface_elements_macros/macros/tooltip" />
             <span i18n:translate="">Geographical coverage:</span>
         </dt>
-        <p class="table-definition-map">
-            <span class="table-definition-show">[+]</span>
-            <span i18n:translate="">Show Map</span>
-        </p>
-        <div class="table-definition-body">
-
-        </div>
 
         <tal:geotagsListing
                 define="hideMap python:True; modal python:False;">
@@ -30,6 +23,10 @@
 </tal:block>
 
 <metal:geotagsMap define-macro="geotags-map">
+<!-- do not show map #21121 -->
+</metal:geotagsMap>
+
+<metal:geotagsMap define-macro="geotags-map-old">
     <tal:showMap
             define="hideMap python:False;">
         <metal:field2

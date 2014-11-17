@@ -3,6 +3,9 @@ Changelog
 
 6.2-dev - (unreleased)
 ----------------------
+* Change: disable macro from arcgis geotags viewer, 
+  as it creates too many requests.
+  [demarant refs #21121]
 
 6.1 - (2014-08-27)
 ------------------
