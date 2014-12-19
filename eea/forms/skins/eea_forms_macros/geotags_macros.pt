@@ -3,21 +3,15 @@
 <tal:block metal:define-macro="geotags-listing">
     <div id="geotags">
 
-        <dt
-                tal:define='tooltip python:context.translate("Geographic coverage describes the locations/places covered by the content item.", domain="eea")'
-                metal:define-slot="geotags-listing-title">
+        <dt tal:define='tooltip python:context.translate("Geographic coverage describes the locations/places covered by the content item.", domain="eea")'
+            metal:define-slot="geotags-listing-title">
             <metal:basic use-macro="here/interface_elements_macros/macros/tooltip" />
             <span i18n:translate="">Geographic coverage:</span>
         </dt>
 
-        <tal:geotagsListing
-                define="hideMap python:True; modal python:False;">
-            <metal:field use-macro="python:context.widget('location', mode='view')">
-
-                <tal:geotags-title metal:fill-slot="geotags" />
-
-            </metal:field>
-        </tal:geotagsListing>
+        <metal:field use-macro="python:context.widget('location', mode='view')">
+            <tal:geotags-title metal:fill-slot="geotags" />
+        </metal:field>
 
     </div>
 </tal:block>
