@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.4-dev - (unreleased)
+----------------------
+
 6.3 - (2014-12-23)
 ------------------
 * Change: removed geotags-map macro logic now that argis map functionality
