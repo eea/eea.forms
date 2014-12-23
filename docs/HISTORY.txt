@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.3-dev - (unreleased)
-----------------------
+6.3 - (2014-12-23)
+------------------
 * Change: removed geotags-map macro logic now that argis map functionality
   is no longer available in eea.geotags
   [ichim-david refs #21121]
