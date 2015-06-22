@@ -3,7 +3,7 @@
 from Products.validation.interfaces.IValidator import IValidator
 from zope.interface import implements
 
-class ManagementPlanCodeValidator:
+class ManagementPlanCodeValidator(object):
     """ Validator
     """
     implements(IValidator)
@@ -27,7 +27,7 @@ class ManagementPlanCodeValidator:
                 try:
                     int(dig)
                 except ValueError:
-                    return (errmsg)
+                    return errmsg
             return 1
         else:
-            return (errmsg)
+            return errmsg
