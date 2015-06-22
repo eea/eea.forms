@@ -6,7 +6,7 @@ from zope.app.form.browser.interfaces import IBrowserWidget
 from zope.app.form.interfaces import IInputWidget
 from zope.formlib.interfaces import WidgetInputError
 try:
-    from zope.app import pagetemplate 
+    from zope.app import pagetemplate
     ViewPageTemplateFile = pagetemplate.ViewPageTemplateFile
 except ImportError: # plone 4.3
     from zope.browserpage import ViewPageTemplateFile
