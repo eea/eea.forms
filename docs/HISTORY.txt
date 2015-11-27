@@ -3,6 +3,8 @@ Changelog
 
 6.6.dev0 - (unreleased)
 -----------------------
+* Change: Geographic coverage title will show up only if location is set
+  [ichimdav refs #30473]
 
 6.5 - (2015-08-18)
 ------------------
