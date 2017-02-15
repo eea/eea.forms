@@ -15,7 +15,7 @@
                 <tal:temporal tal:repeat="temp temporalCoverage" tal:condition="python:value != '-1'">
                   <span>
                     <a class="link-category" rel="tag"
-                       tal:attributes="href python:portal_url + '/@@search?Date=' + temp"
+                       tal:attributes="href python:portal_url + '/@@search?SearchableText=' + temp"
                        tal:content="temp"></a>
                     <span class="separator" tal:condition="python:not repeat['temp'].end">,</span>
                   </span>
