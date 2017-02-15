@@ -52,12 +52,12 @@ class FormatTempCoverage(object):
                 adapter = ITemporalCoverageAdapter(self.context)
                 data = adapter.value()
             except (AttributeError, TypeError):
-                return False
+                return ''
         else:
             field = self.context.getField('temporalCoverage')
             if field:
                 data = field.getAccessor(self.context)()
                 if not data:
-                    return False
+                    return ''
 
         return ", ".join(grouped_coverage(data))
