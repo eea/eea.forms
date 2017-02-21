@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.8.dev0 - (unreleased)
------------------------
+6.8 - (2017-02-21)
+------------------
 * Bug fix: Fix temporal coverage macros
   [avoinea refs #82327]
 
