@@ -100,7 +100,7 @@ class ManagementPlanCode(Field):
         if code:
             code = code.strip()
 
-        if not len(code) > 0:
+        if not code:
             return False
 
         return True

@@ -1,13 +1,13 @@
 """ Widgets
 """
 from eea.forms import validators
-validators.register()
-
 from eea.forms import fields
-fields.register()
-
 from eea.forms import widgets
+
+validators.register()
+fields.register()
 widgets.register()
+
 
 def initialize(context):
     """ Zope 2 initialize

@@ -29,5 +29,4 @@ class ManagementPlanCodeValidator(object):
                 except ValueError:
                     return errmsg
             return 1
-        else:
-            return errmsg
+        return errmsg
