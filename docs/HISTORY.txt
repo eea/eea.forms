@@ -3,6 +3,8 @@ Changelog
 
 7.1.dev0 - (unreleased)
 -----------------------
+* Bug fix W3C compliance modifications
+  [valipod refs #86295]
 
 7.0 - (2017-05-22)
 ------------------

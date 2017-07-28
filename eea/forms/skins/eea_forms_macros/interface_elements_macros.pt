@@ -6,6 +6,7 @@
         tal:condition="tooltip">
     <img class="eea-flexible-tooltip-right"
          src="information.png"
+         alt="information.png"
          title=""
             tal:attributes="src string:${portal_url}/information.png;
             title tooltip" />
