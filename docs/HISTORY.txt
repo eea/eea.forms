@@ -3,6 +3,8 @@ Changelog
 
 7.3.dev0 - (unreleased)
 -----------------------
+* Change: Replace eeacms/zptlint with eeacms/plone-test:4 zptlint
+  [avoinea refs #90415]
 
 7.2 - (2017-11-07)
 ------------------
@@ -31,7 +33,7 @@ Changelog
 
 6.7 - (2017-02-14)
 ------------------
-* Feature: geotags, temporal coverage and themes display 
+* Feature: geotags, temporal coverage and themes display
   alligned with tags style
   [alecghica refs #81054]
 
