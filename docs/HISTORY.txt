@@ -1,8 +1,14 @@
 Changelog
 =========
 
-7.3.dev0 - (unreleased)
------------------------
+7.4 - (2018-02-14)
+------------------
+* Bug fix: avoid temporal_widget.js error in case jQuery.tokeninput isn't
+  available
+  [ichim-david refs #92877]
+
+7.3 - (2017-12-12)
+------------------
 * Change: Replace eeacms/zptlint with eeacms/plone-test:4 zptlint
   [avoinea refs #90415]
 
