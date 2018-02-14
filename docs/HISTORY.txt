@@ -1,8 +1,8 @@
 Changelog
 =========
 
-7.4.dev0 - (unreleased)
------------------------
+7.4 - (2018-02-14)
+------------------
 * Bug fix: avoid temporal_widget.js error in case jQuery.tokeninput isn't
   available
   [ichim-david refs #92877]
