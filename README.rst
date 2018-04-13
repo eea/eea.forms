@@ -1,8 +1,12 @@
 =========
 EEA Forms
 =========
-.. image:: http://ci.eionet.europa.eu/job/eea/job/eea.forms/job/master/badge/icon
-  :target: http://ci.eionet.europa.eu/job/eea/job/eea.forms/job/master/display/redirect
+.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.forms/develop
+  :target: https://ci.eionet.europa.eu/job/eea/job/eea.forms/job/develop/display/redirect
+  :alt: develop
+.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.forms/master
+  :target: https://ci.eionet.europa.eu/job/eea/job/eea.forms/job/master/display/redirect
+  :alt: Master
 
 Introduction
 ============
