@@ -1,6 +1,11 @@
 Changelog
 =========
 
+7.5-dev0 - (unreleased)
+---------------------
+* Change: updated URLs pointing to eea.europa.eu with https://
+  [alecghica refs #95849]
+
 7.4 - (2018-02-14)
 ------------------
 * Bug fix: avoid temporal_widget.js error in case jQuery.tokeninput isn't
