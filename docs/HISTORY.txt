@@ -1,6 +1,9 @@
 Changelog
 =========
 
+7.6-dev0 - (unreleased)
+---------------------
+
 7.5 - (2018-09-07)
 ---------------------
 * Bugfix: Fixed size of the prev/next wizard buttons on edit
@@ -236,4 +239,3 @@ Changelog
   [szabozo0]
 * Move ManagementPlan form & widget from eea.dataservice
   [szabozo0]
-
