@@ -1,6 +1,14 @@
 Changelog
 =========
 
+7.5 - (2018-09-07)
+---------------------
+* Bugfix: Fixed size of the prev/next wizard buttons on edit
+  [szabozo0 refs #97571]
+
+* Change: updated URLs pointing to eea.europa.eu with https://
+  [alecghica refs #95849]
+
 7.4 - (2018-02-14)
 ------------------
 * Bug fix: avoid temporal_widget.js error in case jQuery.tokeninput isn't

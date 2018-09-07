@@ -1,8 +1,12 @@
 =========
 EEA Forms
 =========
-.. image:: http://ci.eionet.europa.eu/job/eea/job/eea.forms/job/master/badge/icon
-  :target: http://ci.eionet.europa.eu/job/eea/job/eea.forms/job/master/display/redirect
+.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.forms/develop
+  :target: https://ci.eionet.europa.eu/job/eea/job/eea.forms/job/develop/display/redirect
+  :alt: develop
+.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.forms/master
+  :target: https://ci.eionet.europa.eu/job/eea/job/eea.forms/job/master/display/redirect
+  :alt: Master
 
 Introduction
 ============
@@ -97,7 +101,7 @@ Funding
 
 EEA_ - European Environment Agency (EU)
 
-.. _EEA: http://www.eea.europa.eu/
-.. _`eea.daviz`: http://eea.github.com/docs/eea.daviz
-.. _`plone.recipe.zope2instance`: http://pypi.python.org/pypi/plone.recipe.zope2instance
-.. _`zc.buildout`: http://pypi.python.org/pypi/zc.buildout
+.. _EEA: https://www.eea.europa.eu/
+.. _`eea.daviz`: https://eea.github.com/docs/eea.daviz
+.. _`plone.recipe.zope2instance`: https://pypi.python.org/pypi/plone.recipe.zope2instance
+.. _`zc.buildout`: https://pypi.python.org/pypi/zc.buildout
