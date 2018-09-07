@@ -64,8 +64,9 @@ EEAFormsEdit.Wizard.prototype = {
 
     jQuery(document).bind('eea-wizard-changed', function(evt, data){
       data = data || {};
+      var fieldset_height = self.left.parent().find("fieldset.formPanel:visible").height() - 20;
       var parent_height = self.left.parent().height() - 70;
-      var height = data.height || parent_height || '80%';
+      var height = fieldset_height || data.height || parent_height || '80%';
       self.left.height(height);
       self.right.height(height);
     });

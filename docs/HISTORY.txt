@@ -3,6 +3,9 @@ Changelog
 
 7.5-dev0 - (unreleased)
 ---------------------
+* Bugfix: Fixed size of the prev/next wizard buttons on edit
+  [szabozo0 refs #97571]
+
 * Change: updated URLs pointing to eea.europa.eu with https://
   [alecghica refs #95849]
 
