@@ -1,6 +1,11 @@
 Changelog
 =========
 
+7.6 - (2019-01-28)
+---------------------
+* Jenkins: Add sonarqube step
+  [avoinea refs #101552]
+
 7.5 - (2018-09-07)
 ---------------------
 * Bugfix: Fixed size of the prev/next wizard buttons on edit
@@ -236,4 +241,3 @@ Changelog
   [szabozo0]
 * Move ManagementPlan form & widget from eea.dataservice
   [szabozo0]
-
