@@ -1,7 +1,7 @@
 Changelog
 =========
 
-7.7-dev0 - (unreleased)
+7.7 - (2020-02-28)
 --------------------------
 * Bug fix: fixed temporal coverage insert when upgrading to jquery 3.4.1
   [ichim-david refs #105112]
