@@ -1,13 +1,18 @@
 Changelog
 =========
 
+7.7 - (2020-02-28)
+--------------------------
+* Bug fix: fixed temporal coverage insert when upgrading to jquery 3.4.1
+  [ichim-david refs #105112]
+
 7.6 - (2019-01-28)
----------------------
+--------------------------
 * Jenkins: Add sonarqube step
   [avoinea refs #101552]
 
 7.5 - (2018-09-07)
----------------------
+--------------------------
 * Bugfix: Fixed size of the prev/next wizard buttons on edit
   [szabozo0 refs #97571]
 

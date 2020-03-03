@@ -99,7 +99,7 @@
 
         $("#token-input-temporalCoverage").on("keydown", function(evt){
             var pressed = String.fromCharCode(evt.keyCode);
-            var field_value = evt.srcElement.value.trim();
+            var field_value = evt.currentTarget.value.trim();
 
 
             if(skip_keys.indexOf(evt.keyCode) === -1){
@@ -107,7 +107,7 @@
                     if(check_isNaN(pressed, evt.keyCode)){
                         return false;
                     } else {
-                        evt.srcElement.value = field_value + "-";
+                        evt.currentTarget.value = field_value + "-";
                     }
                 }
                 else if(check_isNaN(pressed, evt.keyCode)) {
