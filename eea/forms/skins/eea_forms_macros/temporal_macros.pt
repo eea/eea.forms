@@ -7,7 +7,7 @@
                 tal:condition="value">
             <!-- Title -->
      <div class="eea-accordion-panel">
-            <h3 class="temporal-coverage-title notoc" metal:define-slot="temporal-coverage-title" i18n:translate="" tal:attributes="class python: 'temporal-coverage-title notoc' if not mini_header else 'temporal-coverage-title notoc eea-accordion-title eea-icon-right-container'">
+            <h3 class="temporal-coverage-title notoc" metal:define-slot="temporal-coverage-title" i18n:translate="" tal:attributes="class python: 'temporal-coverage-title notoc' if not mini_header else 'temporal-coverage-title notoc eea-accordion-title eea-icon-left-container'">
                 Temporal coverage
             </h3>
 
