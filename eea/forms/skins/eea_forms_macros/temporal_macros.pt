@@ -16,15 +16,14 @@
               <div id="tempCoverage" tal:attributes="class python:'pane' if mini_header else ''">
                 <tal:temporal tal:repeat="temp temporalCoverage" tal:condition="python:value != '-1'">
                   <span>
-                    <a class="link-category" rel="tag"
-                       tal:content="temp"></a>
-                    <span class="separator" tal:condition="python:not repeat['temp'].end">,</span>
+                    <span class="body-category" rel="tag"
+                       tal:content="temp"></span>
                   </span>
                 </tal:temporal>
                 <span tal:condition="python:value == '-1'">
-                    <a i18n:translate="" class="link-category" rel="tag">
+                    <span i18n:translate="" class="body-category" rel="tag">
                         Dynamic
-                    </a>
+                    </span>
                 </span>
               </div>
             </metal:body>
@@ -46,15 +45,14 @@
         <dd metal:fill-slot="temporal-coverage-body" id="tempCoverage">
           <tal:temporal tal:repeat="temp temporalCoverage" tal:condition="python:value != '-1'">
             <span>
-              <a class="link-category" rel="tag"
-                 tal:content="temp"></a>
-              <span class="separator" tal:condition="python:not repeat['temp'].end">,</span>
+              <span class="body-category" rel="tag"
+                 tal:content="temp"></span>
             </span>
           </tal:temporal>
           <span id="tempCoverage" tal:condition="python:value == '-1'">
-              <a i18n:translate="" class="link-category" rel="tag" href="#">
+              <span i18n:translate="" class="body-category" rel="tag" href="#">
                   Dynamic
-              </a>
+              </span>
           </span>
         </dd>
 
