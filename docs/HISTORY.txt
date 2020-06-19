@@ -1,6 +1,11 @@
 Changelog
 =========
 
+7.8 - (2020-06-19)
+---------------------------
+* Change: temporal coverage data is now hidden behind an accordion
+  [ichim-david refs #117295]
+
 7.7 - (2020-02-28)
 --------------------------
 * Bug fix: fixed temporal coverage insert when upgrading to jquery 3.4.1
